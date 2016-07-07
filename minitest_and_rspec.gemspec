@@ -32,4 +32,5 @@ Gem::Specification.new do |spec|
 
   # Add Rspec
   spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rspec-its"
 end

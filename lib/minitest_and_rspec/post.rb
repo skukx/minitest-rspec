@@ -1,10 +1,10 @@
 module MinitestAndRspec
   class Post
-    attr_reader :name, :post, :votes
+    attr_accessor :name, :message, :votes
 
-    def initialize(name, post)
-      @name = name
-      @post = post
+    def initialize(args = {})
+      @name = args[:name]
+      @post = args[:message]
     end
 
     def up_vote
