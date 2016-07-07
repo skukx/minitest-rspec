@@ -3,8 +3,9 @@ module MinitestAndRspec
     attr_accessor :name, :message, :votes
 
     def initialize(args = {})
-      @name = args[:name]
-      @post = args[:message]
+      @name = args[:name] || ''
+      @post = args[:message] || ''
+      @votes = 0
     end
 
     def up_vote
