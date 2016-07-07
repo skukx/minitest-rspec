@@ -5,10 +5,12 @@ class PostTest < Minitest::Test
     @subject = MinitestAndRspec::Post.new name: 'John Doe', message: 'Hello World!'
   end
 
-  def test_respond_to
+  def respond_to
     assert_respond_to(@subject, :name)
     assert_respond_to(@subject, :message)
     assert_respond_to(@subject, :votes)
+    assert_respond_to(@subject, :up_vote)
+    assert_respond_to(@subject, :down_vote)
   end
 
   def test_values

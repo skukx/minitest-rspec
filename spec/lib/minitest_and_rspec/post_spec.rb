@@ -5,9 +5,11 @@ module MinitestAndRspec
     it { is_expected.to respond_to :name }
     it { is_expected.to respond_to :message }
     it { is_expected.to respond_to :votes }
+    it { is_expected.to respond_to :up_vote }
+    it { is_expected.to respond_to :down_vote }
 
     subject do
-      Post.new name: name, message: message
+      described_class.new name: name, message: message
     end
 
     let(:name) { 'John Doe' }
@@ -15,6 +17,7 @@ module MinitestAndRspec
 
     its(:name) { is_expected.to eql name }
     its(:message) { is_expected.to eql message }
+    its(:votes) { is_expected.to eql 0 }
 
     context 'When up voted' do
       before do
