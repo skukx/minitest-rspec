@@ -4,7 +4,7 @@ module MinitestAndRspec
 
     def initialize(args = {})
       @name = args[:name] || ''
-      @post = args[:message] || ''
+      @message = args[:message] || ''
       @votes = 0
     end
 

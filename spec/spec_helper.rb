@@ -2,6 +2,7 @@ require 'bundler/setup'
 Bundler.setup
 
 require 'minitest_and_rspec'
+require 'rspec/its'
 
 RSpec.configure do |config|
   # Set optional configurations
