@@ -3,6 +3,8 @@ Bundler.setup
 
 require 'minitest_and_rspec'
 require 'rspec/its'
+require 'factory_girl_rails'
+require 'faker'
 
 RSpec.configure do |config|
   # Set optional configurations
