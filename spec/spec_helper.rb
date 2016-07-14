@@ -3,7 +3,7 @@ Bundler.setup
 
 require 'minitest_and_rspec'
 require 'rspec/its'
-require 'factory_girl_rails'
+require 'factory_girl'
 require 'faker'
 
 RSpec.configure do |config|
@@ -12,4 +12,8 @@ RSpec.configure do |config|
   config.tty = true
   config.formatter = :documentation
   config.order = :random
+  config.include FactoryGirl::Syntax::Methods
+  config.before(:suite) do
+    FactoryGirl.find_definitions
+  end
 end

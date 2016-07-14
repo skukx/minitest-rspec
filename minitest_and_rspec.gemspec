@@ -37,5 +37,5 @@ Gem::Specification.new do |spec|
 
   # Add Faker and Factory Girl
   spec.add_development_dependency "faker"
-  spec.add_development_dependency "factory_girl_rails"
+  spec.add_development_dependency "factory_girl"
 end
